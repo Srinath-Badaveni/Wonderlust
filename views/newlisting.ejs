@@ -1,0 +1,103 @@
+<% layout('./layouts/boilerPlate') -%>
+<body>
+  <div class="row">
+    <div class="col-8 offset-2">
+      <form
+        class="needs-validation"
+        method="POST"
+        action="/listings"
+        novalidate
+      >
+        <h3>Create a New Listing</h3>
+        <div class="mb-3">
+          <label for="title" class="form-lable">Title</label>
+          <input
+            name="addListings[title]"
+            type="text"
+            placeholder="Enter Title"
+            class="form-control"
+            required
+          />
+          <div class="valid-feedback">Title looks good!</div>
+          <div class="invalid-feedback">Enter valid Title</div>
+        </div>
+
+        <div class="mb-3">
+          <label for="description" class="form-lable">Description</label>
+          <textarea
+            name="addListings[description]"
+            type="text"
+            class="form-control"
+            required
+          ></textarea>
+          <div class="valid-feedback">Description looks good!</div>
+          <div class="invalid-feedback">Enter valid Description</div>
+        </div>
+        <!-- <div class="mb-3">
+          <label for="image" class="form-lable">Upload Image</label>
+          <input
+            name="addListings[image]"
+            type="file"
+            class="form-control"
+            required
+          />
+        </div> -->
+
+        <div class="mb-3">
+          <label for="image" class="form-lable">Image Url</label>
+          <input
+            type="text"
+            name="addListings[image]"
+            class="form-control"
+            placeholder="Enter URL"
+            required
+          />
+          <div class="valid-feedback">URL looks good!</div>
+          <div class="invalid-feedback">Enter valid URL</div>
+        </div>
+
+        <div class="row">
+          <div class="mb-3 col-md-4">
+            <label for="price" class="form-lable">Price</label>
+            <input
+              name="addListings[price]"
+              placeholder="1200"
+              class="form-control"
+              required
+            />
+            <div class="valid-feedback">Price looks good!</div>
+            <div class="invalid-feedback">Enter valid Price</div>
+          </div>
+
+          <div class="mb-3 col-md-8">
+            <label for="country" class="form-lable">Country</label>
+            <input
+              name="addListings[country]"
+              type="text"
+              placeholder="India"
+              class="form-control"
+              required
+            />
+            <div class="valid-feedback">Country looks good!</div>
+            <div class="invalid-feedback">Enter valid Country Name</div>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label for="location" class="form-lable">Location</label>
+          <input
+            name="addListings[location]"
+            type="text"
+            placeholder="Hyderabad,Telangana"
+            class="form-control"
+            required
+          />
+          <div class="valid-feedback">Location looks good!</div>
+          <div class="invalid-feedback">Enter valid Location</div>
+        </div>
+        <button class="btn btn-dark">ADD</button>
+        <br /><br />
+      </form>
+    </div>
+  </div>
+</body>
