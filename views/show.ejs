@@ -106,6 +106,7 @@
     </div>
     <% }%>
 <%=currUser._id%>
+<% if(currUser && (currUser._id==677ebc218f5e5bc74f95682a||currUser._id==66e8761b1a2689ab9ada1a06)){%>
     <!-- //reviews -->
     <% if(listing.review.length>0){%>
     <div class="row review-card">
@@ -133,6 +134,7 @@
       <% } %>
     </div>
     <%}%>
+<%}%>
     <!-- <h2>Where you will be</h2>
     <div id="map" class="mb-3"></div> -->
     <!-- <script>
